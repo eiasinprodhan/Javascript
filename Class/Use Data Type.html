@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       
+        input[type=number]{
+            width: 50%;
+            height: 30px;
+            border: 1px solid maroon;
+            border-radius: 8px;
+        }
+
+        input[type=text]{
+            width: 50%;
+            height: 30px;
+            border: 1px solid maroon;
+            border-radius: 8px;
+        }
+
+        input[type=button]{
+            background-color: maroon;
+            color: white;
+            border-radius: 10px;
+            width: 10%;
+            height: 30px;
+            border: 1px solid maroon;
+        }
+
+        .calculator{
+            background-color: beige;
+            padding: 20px;
+            margin: 0px auto;
+            height: 100vh;
+        }
+
+    </style>
+    <title>Use Of Data Type</title>
+</head>
+<body>
+    <!-- Calculator Form Start -->
+     <div class="calculator">
+        <h1>Calculator</h1>
+    <label for="">Number 1</label>
+    <br>
+    <input id="number1" type="number">
+    <br>
+    <br>
+    <label for="">Number 2</label>
+    <br>
+    <input id="number2" type="number">
+    <br>
+    <br>
+    <input type="button" value="+" onclick="add()">
+    <input type="button" value="-" onclick="sub()">
+    <input type="button" value="*" onclick="mul()">
+    <input type="button" value="/" onclick="div()">
+    <input type="button" value="%" onclick="mod()">
+    <br>
+    <br>
+    <h3>Result:</h3> <input type="text" id="result">
+     </div>
+    <!-- Calculator End -->
+    <script>
+        // Addition
+        function add(){
+            let number1 = parseFloat(document.getElementById("number1").value);
+            let number2 = parseFloat(document.getElementById("number2").value);
+            let calculate = number1 + number2;
+            document.getElementById("result").value = calculate;
+        }
+
+        // Subtraction 
+        function sub(){
+            let number1 = parseFloat(document.getElementById("number1").value);
+            let number2 = parseFloat(document.getElementById("number2").value);
+            let calculate = number1 - number2;
+            document.getElementById("result").value = calculate;
+        }
+
+        // Multipication
+        function mul(){
+            let number1 = parseFloat(document.getElementById("number1").value);
+            let number2 = parseFloat(document.getElementById("number2").value);
+            let calculate = number1 * number2;
+            document.getElementById("result").value = calculate;
+        }
+
+        // Division
+        function div(){
+            let number1 = parseFloat(document.getElementById("number1").value);
+            let number2 = parseFloat(document.getElementById("number2").value);
+            let calculate = number1 / number2;
+            document.getElementById("result").value = calculate;
+        }
+
+        // Modulus
+        function mod(){
+            let number1 = parseFloat(document.getElementById("number1").value);
+            let number2 = parseFloat(document.getElementById("number2").value);
+            let calculate = number1 % number2;
+            document.getElementById("result").value = calculate;
+        }
+    </script>
+</body>
+</html>
