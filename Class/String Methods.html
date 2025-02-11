@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+
+<body>
+
+    <script>
+        let name = "Abdullah Al Masud";
+        let firstName = "    Mohammad    ";
+
+        // Find Character By Index Number
+        document.write(name.charAt(0) + "<br/>");
+
+        // Join Strings
+        document.write(firstName.concat(name, "<br/>"));
+
+        // Find Index First Number By Character
+        document.write(name.indexOf("M") + "<br/>");
+
+        // Find Last Index Number By Character
+        document.write(name.lastIndexOf("A") + "<br/>");
+
+        // Count String Letters
+        document.write(name.length + "<br/>");
+
+        // Replace String Word
+        document.write(name.replace("Masud", "Manna") + "<br/>");
+
+        // Crop String By Index Start To Index End Number
+        document.write(name.slice(12, 17) + "<br/>");
+
+        // Divide String In Parts
+        document.write(name.split(" ") + "<br/>");
+
+        // String To Uppercase
+        document.write(name.toUpperCase() + "<br/>");
+
+        // String To Lowercase
+        document.write(name.toLowerCase() + "<br/>");
+
+        // Remove All Space From Start And End
+        document.write(firstName.trim() + "<br/>");
+    </script>
+</body>
+
+</html>
