@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+</head>
+<body>
+
+    <script>
+        let input = prompt("Enter a number to check Odd or Even");
+
+         // Method 1
+         if(input % 2 == 0){
+            document.write(input+ " This is an Even Number");
+        }
+        else{
+            document.write(input+ " This is an Odd Number");
+        }
+
+        document.write("<br/> <br/>");
+
+        // Method 2
+        if(input % 2 != 0){
+            document.write(input+ " This is an Odd Number");
+        }
+        else{
+            document.write(input+ " This is an Even Number");
+        }
+
+        document.write("<br/> <br/>");
+
+         // Method 3
+        if(!(input % 2 == 0)){
+            document.write(input+ " This is an Odd Number");
+        }
+        else{
+            document.write(input+ " This is an Even Number");
+        }
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Check</title>
+</head>
+
+<body>
+
+    <label for="">First Number:</label>
+    <br>
+    <input type="text" id="input1">
+    <br>
+    <label for="">Second Number:</label>
+    <br>
+    <input type="text" id="input2">
+    <br>
+    <br>
+    <input type="button" value="Result" onclick="findMax()">
+    <br>
+    <br>
+    <p id="result"></p>
+
+
+    <script>
+
+        function findMax() {
+
+            let input1 = parseFloat(document.getElementById("input1").value);
+            let input2 = parseFloat(document.getElementById("input2").value);
+
+            if (input1 >= input2) {
+                document.getElementById("result").innerHTML = "Result: First Number: " + input1 + " is Bigger Than Second Number: " + input2;
+            }
+            else {
+                document.getElementById("result").innerHTML = "Result: Second Number: " + input2 + " is Bigger Than First Number: " + input1;
+            }
+        }
+    </script>
+</body>
+
+</html>
