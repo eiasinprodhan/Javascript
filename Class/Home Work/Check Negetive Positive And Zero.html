@@ -15,7 +15,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-8 bg-dark p-5 rounded">
                 <h1 class="text-danger text-center">Check Negetive Positive Or Zero</h1>
-                <p class="text-light text-center" id="result"></p>
+                <p class="text-warning text-center" id="result"></p>
                 <label class="form-label text-light" for="">Number:</label>
                 <input class="form-control" type="text" id="number">
                 <br>
@@ -33,13 +33,13 @@
             
 
             if (number >0) {
-                document.getElementById("result").innerHTML = "Positive";
+                document.getElementById("result").innerHTML = "This is a Positive number";
             }
             else if (number == 0) {
-                document.getElementById("result").innerHTML = "Zero";
+                document.getElementById("result").innerHTML = "This is Zero";
             }
             else {
-                document.getElementById("result").innerHTML = "Negetive";
+                document.getElementById("result").innerHTML = "This is a Negetive number";
             }
         }
     </script>
