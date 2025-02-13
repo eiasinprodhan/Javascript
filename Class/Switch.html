@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+
+<body>
+
+
+    <script>
+        let input1 = parseInt(prompt("Enter Your Number"));
+
+        switch (input1) {
+            case 1:
+                let input2 = parseInt(prompt("Enter Your Number"));
+
+                switch (input2) {
+                    case 1:
+                        document.write("200MB");
+                        break;
+                    case 2:
+                        document.write("500MB");
+                        break;
+                    case 3:
+                        document.write("1GB");
+                        break;
+                    case 4:
+                        document.write("5GB");
+                        break;
+                    case 5:
+                        document.write("10GB");
+                        break;
+                    default:
+                        document.write("You Entered A Wrong Number");
+                }
+                break;
+            case 2:
+                document.write("Minutes");
+                break;
+            case 3:
+                document.write("Caller Tune");
+                break;
+            case 4:
+                document.write("Recharge");
+                break;
+            case 5:
+                document.write("Nothing");
+                break;
+            default:
+                document.write("You Entered A Wrong Number");
+        }
+    </script>
+</body>
+
+</html>

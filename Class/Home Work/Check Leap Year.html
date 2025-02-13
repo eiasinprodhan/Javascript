@@ -49,34 +49,56 @@
         }
 
         // Method 2
-        // function findLeapYear() {
-        //     let year = parseFloat(document.getElementById("year").value);
+        function findLeapYear() {
+            let year = parseFloat(document.getElementById("year").value);
 
-        //     if (year % 400 == 0) {
-        //         document.getElementById("result").innerHTML = year + " Year is a leap year"
-        //     }
-        //     else if (year % 100 == 0) {
-        //         document.getElementById("result").innerHTML = year + " Year isn \'t a leap year";
-        //     }
-        //     else if (year % 4 == 0) {
-        //         document.getElementById("result").innerHTML = year + " Year is a leap year"
-        //     }
-        //     else {
-        //         document.getElementById("result").innerHTML = year + " Year isn \'t a leap year";
-        //     }
-        // }
+            if (year % 400 == 0) {
+                document.getElementById("result").innerHTML = year + " Year is a leap year"
+            }
+            else if (year % 100 == 0) {
+                document.getElementById("result").innerHTML = year + " Year isn \'t a leap year";
+            }
+            else if (year % 4 == 0) {
+                document.getElementById("result").innerHTML = year + " Year is a leap year"
+            }
+            else {
+                document.getElementById("result").innerHTML = year + " Year isn \'t a leap year";
+            }
+        }
 
         // Method 3
-        // function findLeapYear() {
-        //     let year = parseFloat(document.getElementById("year").value);
+        function findLeapYear() {
+            let year = parseFloat(document.getElementById("year").value);
 
-        //     if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-        //         document.getElementById("result").innerHTML = year + " Year is a leap year";
-        //     }
-        //     else {
-        //         document.getElementById("result").innerHTML = year + " Year isn \'t a leap year";
-        //     }
-        // }
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                document.getElementById("result").innerHTML = year + " Year is a leap year";
+            }
+            else {
+                document.getElementById("result").innerHTML = year + " Year isn \'t a leap year";
+            }
+        }
+
+        // Method 4
+        function findLeapYear() {
+            let year = parseFloat(document.getElementById("year").value);
+
+            if (year % 4 == 0) {
+                if (year % 100 == 0) {
+                    if (year % 400 == 0) {
+                        document.getElementById("result").innerHTML = year + " Year is a leap year";
+                    }
+                    else {
+                        document.getElementById("result").innerHTML = year + " Year isn \'t a leap year";
+                    }
+                }
+                else {
+                    document.getElementById("result").innerHTML = year + " Year is a leap year";
+                }
+            }
+            else {
+                document.getElementById("result").innerHTML = year + " Year isn \'t a leap year";
+            }
+        }
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
