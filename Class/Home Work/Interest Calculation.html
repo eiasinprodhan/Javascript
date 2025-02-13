@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculation</title>
+</head>
+
+<body>
+
+    <script>
+        let amount = parseFloat(prompt("Enter Your Amount"));
+        let timePeriod = parseFloat(prompt("Enter Your Time Period"));
+
+        if (amount <= 0 && timePeriod <= 0) {
+            document.write("Amount & Time Period Can't Be Zero Or Negative")
+        }
+        else {
+            if (timePeriod >= 5) {
+                document.write("You Get: " + amount * timePeriod * (7 / 100) + " Taka Interest");
+            }
+            else {
+                document.write("You Get: " + amount * timePeriod * (5 / 100) + " Taka Interest");
+            }
+        }
+    </script>
+</body>
+
+</html>
