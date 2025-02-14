@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interest Calculation System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 bg-dark p-5 rounded">
+                <h1 class="text-info text-center mb-5">Calculate Your Interest</h1>
+                <p class="text-success text-center" id="result"></p>
+                <label class="form-label text-light" for="">Amount:</label>
+                <input class="form-control" type="text" id="amount">
+                <label class="form-label text-light" for="">Time Period:</label>
+                <input class="form-control" type="text" id="timePeriod">
+                <input class="btn btn-success my-3" type="button" value="Calculate" onclick="calculate()">
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+    <script>
+        function calculate() {
+            let amount = parseFloat(document.getElementById("amount").value);
+            let timePeriod = parseFloat(document.getElementById("timePeriod").value);
+
+            if (amount <= 0 || timePeriod <= 0) {
+                document.getElementById("result").innerHTML = "<p class='text-danger'>Amount & Time Period Can't Be Zero Or Negative</p>";
+            }
+            else {
+                if (timePeriod >= 5) {
+                    document.getElementById("result").innerHTML = "You Got: " + amount * timePeriod * ((5+2) / 100) + " Taka Interest";
+                }
+                else {
+                    document.getElementById("result").innerHTML = "You Got: " + amount * timePeriod * (5 / 100) + " Taka Interest";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
