@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Unlimited Text Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 bg-dark p-5 rounded">
+                <h1 class="text-info text-center mb-5">Unlimited Text Generator</h1>
+                <label class="form-label text-light" for="">Your Text</label>
+                <input class="form-control" type="text" id="text">
+                <label class="form-label text-light" for="">Amount</label>
+                <input class="form-control" type="text" id="amount">
+                <input class="btn btn-success my-3" type="button" value="Generate" onclick="generate()">
+                <p class="text-success" id="result"></p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+    <script>
+        function generate() {
+            let text = document.getElementById("text").value;
+            let amount = parseInt(document.getElementById("amount").value);
+            let result = "";
+
+            for(let i = 1; i <= amount; i++){
+                result+= text + " " + i + "<br/>";
+            }
+
+            document.getElementById("result").innerHTML = result;
+
+        }
+    </script>
+</body>
+
+</html>
