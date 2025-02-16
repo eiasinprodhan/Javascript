@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series</title>
+</head>
+
+<body>
+
+    <script>
+        let a = parseInt(prompt("Enter Series First Number"));
+        let b = parseInt(prompt("Enter Series Second Number"));
+        let c = parseInt(prompt("Enter Series Three Number"));
+        let n = parseInt(prompt("Enter nth"));
+
+        if ((c - b) == (b - a)) {
+            let d = b - a;
+            let sum = (a + (n - 1) * d);
+            document.write(sum);
+        }
+        else if ((c / b) == (b / a)) {
+            let r = b/a;
+            let sum = ((a)*(r**(n-1)));
+            document.write(sum);
+
+        }
+        else {
+            document.write("It\'s Not A Series");
+        }
+    </script>
+</body>
+
+</html>
