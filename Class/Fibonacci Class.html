@@ -12,19 +12,21 @@
 
     <script>
         let input = parseInt(prompt("Enter Your Number "));
+        let n = input - 2;
         let n1 = 0;
         let n2 = 1;
-        let n3 = n1 + n2;
-        let result = "";
+        let sum = 0;
+
+        document.write(n1 + ", ");
+        document.write(n2 + ", ");
 
         for (let i = 1; i <= input; i++) {
-            n1 += i; // 1, 2, 3
-            n2 += i; // 2, 3, 4
-            n3 = n1 + n2;// 3, 5, 7
-            result += n3 + ", ";
+            sum = n1 + n2;
+            document.write(sum + ", ");
+            n1 = n2;
+            n2 = sum;
         }
 
-        document.write(result)
     </script>
 </body>
 

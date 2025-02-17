@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop Print 5-50</title>
+</head>
+<body>
+
+    <script>
+        let n =5;
+        while(n<=50){
+
+            if(n==50){
+                document.write(n);
+                break;
+            }
+
+           else if(n%10==0){
+                n++;
+                continue;
+            }
+            
+            document.write(n + ", ");
+            n++;
+        }
+    </script>
+</body>
+</html>

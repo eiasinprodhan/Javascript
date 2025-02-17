@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci While Loop</title>
+</head>
+<body>
+
+    <script>
+        let n = parseInt(prompt("Enter Limit "));
+        let a = 0;
+        let b = 1;
+        let count = 0;
+
+        while(count < n){
+            document.write(a + ", ");
+            let temp = a + b;
+            a=b;
+            b=temp;
+            count++;
+        }
+    </script>
+</body>
+</html>
