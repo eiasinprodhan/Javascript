@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+
+
+    <script>
+        let names = ["Shimanto", "Atique", "Imran", "Masud", "Istiaq", "Arif", "Atik", "Reja", "Sadiar", "Rakib"];
+        let passwords = ["65485", "65423", "65584", "54885", "15485", "15658", "15485", "15485", "15485", "32155"];
+
+        let userName = prompt("Your User Name");
+
+        for(let i=0; i<names.length;i++){
+            if(userName.toLowerCase() == names[i].toLowerCase()){
+                let index = i;
+                let userPassword = prompt("Your Password");
+                if(userPassword == passwords[index]){
+                    document.write("Welcome " + userName);
+                }
+                else{
+                    document.write("Password is Incorrect!");
+                }
+                break;
+            }
+
+            if(i==names.length-1){
+                document.write("User Name is Incorrect");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
