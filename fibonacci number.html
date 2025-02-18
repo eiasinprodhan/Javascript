@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Number</title>
+</head>
+<body>
+    
+    <script>
+        let input = parseInt(prompt("Enter Your Number"));
+        let n1 = 0;
+        let n2 = 1;
+        let result = "";
+        let total = 0;
+        
+        for(let i = 1; i<=input; i++){
+            result+=n1 + " + ";
+            total+=n1;
+            n3 = n1 + n2;
+            n1 = n2;
+            n2 = n3;
+        }
+
+        let newResult = result.slice(0, result.length - 2);
+        document.write(newResult);
+        document.write(" = ");
+        document.write(total);
+    </script>
+</body>
+</html>

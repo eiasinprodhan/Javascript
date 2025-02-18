@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Number</title>
+</head>
+<body>
+    
+    <script>
+        let input = parseInt(prompt("Enter Your Number"));
+        let result = "";
+        let total = 1;
+
+        for(let i=input; i>=1; i--){
+            result+=i + " × ";
+            total*=i;
+        }
+
+        let newResult = result.slice(0, result.length - 2)
+        document.write(newResult);
+        document.write(" = ")
+        document.write(total);
+    </script>
+</body>
+</html>
