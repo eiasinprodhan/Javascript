@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Show Data Another Page</title>
+</head>
+<body>
+    <label for="">Full Name</label>
+    <br>
+    <input type="text" id="fullName">
+    <br>
+    <label for="">Email</label>
+    <br>
+    <input type="email" id="email">
+    <br>
+    <label for="">Password</label>
+    <br>
+    <input type="password" id="password">
+    <br>
+    <br>
+    <input type="button" value="Save" onclick="save()">
+
+    <script>
+        function save(){
+            let fullName = document.getElementById("fullName").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            let output = "Full Name: " + fullName + "<br/>" + "Email: " + email + "<br/>" + "Password: " + password;
+
+            let documentNew = window.open("", "_blank");
+            documentNew.document.write(output);
+        }
+    </script>
+
+</body>
+</html>
