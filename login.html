@@ -10,46 +10,52 @@
 </head>
 
 <body>
-    <div class="container">
-        <p class="text-success" id="welcome"></p>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="userName" aria-describedby="emailHelp">
+    <div class="container my-5">
+       <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 bg-dark p-5 text-light rounded">
+            <p id="welcome"></p>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">User Name</label>
+                <input type="email" class="form-control" id="userName" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password">
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="login()">Login</button>
         </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password">
-        </div>
-        <button type="submit" class="btn btn-primary" onclick="login()">Login</button>
+        <div class="col-md-3"></div>
+       </div>
     </div>
 
 
 
     <script>
-        function login() {
-            let names = ["fahim", "ovi", "mansi", "bushra", "foysal", "abutaher", "tanjila", "eva"];
+        function login(){
+            let names = ["rakib", "ovi", "reja", "eiasin", "foysal", "robin", "parvej", "imran"];
 
             let passwords = ["abc125", "cba986", "acb658", "abc659", "acb659", "aac358", "bbc659", "abb659", "cca648"]
 
             let userName = document.getElementById("userName").value;
 
-            let welcome = document.getElementById("welcome").value;
+            let welcome = document.getElementById("welcome");
 
             for (let i = 0; i < names.length; i++) {
                 if (userName == names[i]) {
                     let index = i;
                     let password = document.getElementById("password").value;
                     if (password == passwords[index]) {
-                        welcome.innerHTML = "Welcome" + names[index];
+                        welcome.innerHTML = "<p class='text-success text-capitalize'>Hi, <b>" + names[index] + "</b></p>";
                     }
                     else {
-                        welcome.innerHTML = "Wrong Password";
+                        welcome.innerHTML = "<p class='text-warning'>Wrong Password</p>";
                     }
                     break;
                 }
 
                 if (i == names.length - 1) {
-                    welcome.innerHTML = "Wrong User Name";
+                    welcome.innerHTML = "<p class='text-danger'>Wrong User Name</p>";
                 }
             }
         }
