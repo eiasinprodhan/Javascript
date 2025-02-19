@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+</head>
+
+<body>
+    <label for="">Email</label>
+    <br>
+    <input type="text" id="email" oninput="checkEmail()">
+    <span id="emailMessage"></span>
+    <br>
+
+    <label for="">Password</label>
+    <br>
+    <input type="password" id="password" oninput="checkPassword()">
+    <span id="passwordMessage"></span>
+    <br>
+    <input type="button" value="Log In">
+
+    <script>
+        function checkEmail() {
+            let email = document.getElementById("email").value;
+            let pattern = /^\S+@\S+\.\S+$/;
+
+            if (pattern.test(email)) {
+                document.getElementById("emailMessage").innerHTML = "<span style='color:green'>Valid Email Address</span>";
+            }
+            else {
+                document.getElementById("emailMessage").innerHTML = "<span style='color:red'>Invalid Email Address</span>";
+            }
+        }
+
+        function checkPassword() {
+            let password = document.getElementById("password").value;
+            let pattern1 = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+
+            if (pattern1.test(password)) {
+                document.getElementById("passwordMessage").innerHTML = "<span style='color:green'>Your Password is Strong</span>";
+            }
+            else {
+                document.getElementById("passwordMessage").innerHTML = "<span style='color:red'>Your Password is Weak</span>";
+            }
+        }
+    </script>
+</body>
+
+</html>
