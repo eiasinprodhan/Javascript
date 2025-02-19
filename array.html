@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <script>
+        let arraySize = parseInt(prompt("Enter Your Array Size"));
+        let myArrays = [];
+        let result = "";
+
+        for (let h = 0; h < arraySize; h++) {
+            let names = prompt("Enter " + (h + 1) + " Number");
+            myArrays[h] = names;
+        }
+
+        for (let i = 0; i < myArrays.length - 1; i++) {
+            for (let j = 0; j < myArrays.length - 1 - i; j++) {
+                if (myArrays[j] > myArrays[j + 1]) {
+                    let temp = myArrays[j];
+                    myArrays[j] = myArrays[j + 1];
+                    myArrays[j + 1] = temp;
+                }
+            }
+        }
+
+        for (let k = 0; k < myArrays.length; k++) {
+            result += myArrays[k] + ", ";
+        }
+
+        document.write("Your Result is: ", result.slice(0, result.length - 2));
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort</title>
+</head>
+<body>
+    
+    <script>
+        let myArray = [50, 65, 25, 15, 35, 16, 8, 1, 100, 45, 33];
+
+        for(let i = 0; i<myArray.length - 1; i++){
+            for(let j = 0; j<myArray.length - 1 - i; j++){
+                if(myArray[j]>myArray[j+1]){
+                    let temp = myArray[j];
+                    myArray[j] = myArray[j+1];
+                    myArray[j+1] = temp;
+                }
+            }
+        }
+
+        document.write(myArray)
+    </script>
+</body>
+</html>
