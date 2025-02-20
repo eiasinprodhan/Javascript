@@ -28,3 +28,27 @@ function showForm(event) {
 
 let form = document.getElementById("formData");
 form.addEventListener("submit", showForm)
+
+function checkEmail(event) {
+    let emailAddress = document.getElementById("emailAddress").value;
+    let pattern = /^\S+@\S+\.\S+$/;
+
+    if (pattern.test(emailAddress)) {
+        document.getElementById("emailMessage").innerHTML = "<span style='color:green'>Valid email address.</span>";
+    }
+    else {
+        document.getElementById("emailMessage").innerHTML = "<span style='color:red'>Invalid email address.</span>";
+    }
+}
+
+function checkPassword(event) {
+    let password = document.getElementById("password").value;
+    let pattern1 = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+
+    if (pattern1.test(password)) {
+        document.getElementById("passwordMessage").innerHTML = "<span style='color:green'>Your Password is Strong</span>";
+    }
+    else {
+        document.getElementById("passwordMessage").innerHTML = "<span style='color:red'><small>(Password must be at least 8 characters and must contain at least one capital letter, small letter, number and special characters.)</small></span>";
+    }
+}

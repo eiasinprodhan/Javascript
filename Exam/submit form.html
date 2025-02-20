@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Form</title>
+</head>
+
+<body>
+    <form id="formData">
+        <label for="">Name</label>
+        <br>
+        <input type="text" id="name">
+        <br>
+        <label for="">Contact</label>
+        <br>
+        <input type="text" id="contact">
+        <br>
+        <label for="">Remarks</label>
+        <br>
+        <textarea name="" id="remarks"></textarea>
+        <br>
+        <label for="">Sex</label>
+        <br>
+        <input type="radio" name="sex" id="Male" value="Male" checked> Male
+        <input type="radio" name="sex" id="Female" value="Female"> Female
+        <br>
+        <label for="">Course</label>
+        <br>
+        <input type="checkbox" name="course" value="NT"> NT
+        <input type="checkbox" name="course" value="IAD"> IAD
+        <input type="checkbox" name="course" value="DDD"> DDD
+        <input type="checkbox" name="course" value="ESAD"> ESAD
+        <br>
+        <label for="">Location</label>
+        <br>
+        <select name="location" id="location">
+            <option selected>Select Location</option>
+            <option value="Banani">Banani</option>
+            <option value="Dhanmondi">Dhanmondi</option>
+            <option value="Mirpur">Mirpur</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" onclick="submitForm()" value="Submit">
+    </form>
+
+    <script>
+        function submitForm() {
+            let nameU = document.getElementById("name").value;
+            let contact = document.getElementById("contact").value;
+            let remarks = document.getElementById("remarks").value;
+            let sex = document.querySelector("input[type=radio]:checked");
+            let subjects = document.querySelectorAll("input[type=checkbox]:checked");
+            let location = document.getElementById("location").value;
+
+            let subjectsList = [];
+
+            for (let i = 0; i < subjects.length; i++) {
+                subjectsList.push(subjects[i].value);
+            }
+
+            let output = "Name: " + nameU + "<br/>"
+                + "Contact: " + contact + "<br/>"
+                + "Remarks: " + remarks + "<br/>"
+                + "Sex: " + sex.value + "<br/>"
+                + "Subjects: " + subjectsList + "<br/>"
+                + "Location: " + location;
+
+            let newWindow = window.open("", "_blank");
+            newWindow.document.write(output);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+</head>
+
+<body>
+    <label for="">Email Address</label>
+    <br>
+    <input type="text" id="email">
+    <br>
+    <input type="submit" onclick="valid()" value="Check">
+
+    <script>
+        function valid() {
+            let email = document.getElementById("email").value;
+            let pattern = /^\S+@\S+\.\S+$/;
+            if (pattern.test(email)) {
+                document.write("Email Address is Correct");
+            }
+            else {
+                document.write("Email Address is Wrong");
+            }
+        }
+    </script>
+</body>
+
+</html>

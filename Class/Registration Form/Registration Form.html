@@ -14,25 +14,27 @@
         <div class="row my-5">
             <div class="col-md-2"></div>
             <div class="col-md-8 bg-dark p-5 rounded text-light">
+                <h2 class="text-center text-warning text-uppercase pb-5">Registration Form</h2>
                 <form id="formData" action="">
-                    
                     <div class="mb-3">
-                        <label class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="fullName" placeholder="Full Name">
+                        <label class="form-label text-warning">Full Name</label>
+                        <input type="text" class="form-control border-danger  bg-dark text-light" id="fullName" placeholder="Full Name">
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="emailAddress" placeholder="Email Address">
+                        <label class="form-label text-warning">Email Address</label>
+                        <input type="email" class="form-control border-danger  bg-dark text-light" id="emailAddress" placeholder="Email Address" oninput="checkEmail()">
+                        <label id="emailMessage"></label>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="**********">
+                        <label class="form-label text-warning">Password</label>
+                        <input type="password" class="form-control  border-danger  bg-dark text-light" id="password" placeholder="**********" oninput="checkPassword()">
+                        <label id="passwordMessage"></label>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Gender</label>
+                        <label class="form-label text-warning">Gender</label>
 
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gender" value="Male" checked>
@@ -51,8 +53,8 @@
 
 
                     <div class="mb-3">
-                        <label class="form-label">Subject</label>
-                        <select class="form-select" id="subject">
+                        <label class="form-label text-warning">Subject</label>
+                        <select class="form-select  border-danger  bg-dark text-light" id="subject">
                             <option selected>Select Your Subject</option>
                             <option value="JEE">JEE</option>
                             <option value="WDPA">WDPA</option>
@@ -61,7 +63,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Hobbies</label>
+                        <label class="form-label text-warning">Hobbies</label>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="Reading">
                             <label class="form-check-label">
@@ -90,12 +92,12 @@
 
 
                     <div class="mb-3">
-                        <label for="address" class="form-label">Address</label>
-                        <textarea class="form-control" id="address" rows="3"></textarea>
+                        <label for="address" class="form-label text-warning">Address</label>
+                        <textarea class="form-control  border-danger bg-dark text-light" id="address" rows="3"></textarea>
                     </div>
 
 
-                    <input class="btn btn-warning" type="submit" value="Submit">
+                    <input class="btn btn-outline-danger text-light" type="submit" value="Submit">
                 </form>
             </div>
             <div class="col-md-2"></div>
