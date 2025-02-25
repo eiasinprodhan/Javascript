@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Array With Sorting</title>
+</head>
+
+<body>
+
+
+    <script>
+        let arraySize = parseInt(prompt("Enter Your Array Size"));
+        let myArray = []
+
+        for (let i = 0; i < arraySize; i++) {
+            let arrayData = parseInt(prompt("Enter Your " + (i + 1) + " Number"));
+            myArray[i] = arrayData;
+        }
+
+        document.write("My New Array: [" + myArray + "] <br/>");
+
+        for (let j = 0; j < myArray.length - 1; j++) {
+
+            for (let k = 0; k < myArray.length - 1 - j; k++) {
+
+                if (myArray[k] > myArray[k + 1]) {
+                    let temp = myArray[k];
+                    myArray[k] = myArray[k + 1];
+                    myArray[k + 1] = temp;
+                }
+            }
+        }
+
+
+        document.write("My Sorted Array: [" + myArray + "]");
+    </script>
+</body>
+
+</html>
