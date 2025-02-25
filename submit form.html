@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Form</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="">Name</label>
+        <br>
+        <input type="text" id="name">
+        <br>
+        <label for="">Contact</label>
+        <br>
+        <input type="text" id="contact">
+        <br>
+        <label for="">Remarks</label>
+        <br>
+        <textarea name="" id="remarks"></textarea>
+        <br>
+        <label for="">Sex</label>
+        <br>
+        <input name="sex" type="radio" value="Male"> Male
+        <input name="sex" type="radio" value="Female"> Female
+        <br>
+        <label for="">Courses</label>
+        <br>
+        <input name="courses" type="checkbox" value="JEE"> JEE
+        <input name="courses" type="checkbox" value="WPDA"> WPDA
+        <input name="courses" type="checkbox" value="DDD"> DDD
+        <input name="courses" type="checkbox" value="GAVE"> GAVE
+        <br>
+        <label for="">Location</label>
+        <br>
+        <select name="" id="location">
+            <option value="Dhaka">Dhaka</option>
+            <option value="Barishal">Barishal</option>
+            <option value="Cumilla">Cumilla</option>
+            <option value="Shylet">Shylet</option>
+        </select>
+        <br>
+        <input type="submit" value="Submit" onclick="sendData()">
+    </form>
+
+    <script>
+        function sendData() {
+            let name = document.getElementById("name").value;
+            let contact = document.getElementById("contact").value;
+            let remarks = document.getElementById("remarks").value;
+            let sex = document.querySelector("input[name=sex]:checked").value;
+            let courses = document.querySelectorAll("input[name=courses]:checked");
+            let location = document.getElementById("location").value;
+
+            let coursesList = [];
+
+            for (let i = 0; i < courses.length; i++) {
+                coursesList.push(courses[i].value);
+            }
+
+            let output = "Name: " + name + "<br/>"
+                + "Contact: " + contact + "<br/>"
+                + "Remarks: " + remarks + "<br/>"
+                + "Sex: " + sex + "<br/>"
+                + "Coursed: " + coursesList + "<br/>"
+                + "Location: " + location;
+
+            document.write(output);
+        }
+    </script>
+</body>
+
+</html>
